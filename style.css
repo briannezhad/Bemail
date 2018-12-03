@@ -1,0 +1,122 @@
+/***********************
+* Standard HTML
+************************/
+
+html{
+	height: 100%
+}
+
+body {
+	background: #192a56;
+	color: #fff;
+}
+
+a {
+	color: #f5f6fa;
+}
+
+a:hover {
+	color: #dcdde1
+}
+
+
+/***********************
+* Document Page
+************************/
+
+.header {
+	padding-top: 25px;
+	padding-bottom: 40px;
+	background: #f5f6fa;
+	margin-bottom: 25px;
+	color: #353b48;
+}
+
+
+.resources ul {
+	list-style: none;
+}
+
+
+
+
+/***********************
+* Componenet 
+************************/
+
+/* Buttons */
+.compose_button {
+	color:  #fff !important;
+	background: #7f8fa6 !important;
+	border-radius: 4px !important;
+}
+
+.mdc-button svg {
+	margin-right: 5px;
+}
+
+
+/* Compose Dialog */
+.compose-header {
+	background: #f5f6fa !important;
+    padding: 20px 15px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.compose-header  svg {
+	margin-right: 5px;
+}
+
+
+.compose-header h2 {
+	font-size: 15px;
+	margin-bottom: 0;
+	color: #718093
+}
+
+
+.compose-header::before {
+	height: 0 !important;
+	display: block !important;
+}
+
+
+.mdc-dialog .mdc-dialog__surface {
+	border-radius: 2px !important;
+}
+
+.mdc-text-field__input {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    font-size: 13px;
+    border: 0 !important;
+    border-bottom: 1px solid #ececec !important;
+    border-radius: 0 !important;
+}
+
+.mdc-text-field--textarea {
+	border: 0px !important;
+	font-size: 13px !important;
+}
+
+.mdc-text-field--textarea .mdc-text-field__input {
+	padding-top: 20px !important
+}
+
+.mdc-dialog__actions {
+	padding: 0;
+}
+
+.send-button {
+    width: 100%;
+    border-radius: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: #7f8fa6 !important;
+    min-height: 50px;
+}
+
+
+
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bemail - Single Email Composing</title>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- JS Files -->
+	<!-- production version, optimized for size and speed -->
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+
+	<!-- development version, includes helpful console warnings -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+	<!-- Bemail Introduction -->
+	<div class="header">
+		<div class="container">
+		  <div class="row">
+		    <div class="col-sm">
+		      <h1>Bemail </h1>
+		      <p>Bemail is a single email composing client with prefix inputs. It helps the user quickly send email from the click of a button. Bemail uses Vue.js to achieve this interactive capability. We have included Material Design and Bootstrap for smooth UI and UX. </p>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+	<!-- Example -->
+	<div class="container">
+	  <div class="row">
+	    <div class="col-sm">
+	      <h2>Example</h2>
+	      <p>Click on the <strong>Compose</strong> button below.</p>
+	      <button class="mdc-button mdc-button--raised compose_button" id="compose">
+	      	<svg fill="white" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 101.35 61.03"><title>Compose</title><g id="Layer_2" data-name="Layer 2"><g id="icons"><path d="M72.19,50.59,68.85,47l-3.67,3.4,5.14,5.54a2.39,2.39,0,0,1-.66.1h0L7.52,55.89a2.47,2.47,0,0,1-1.14-.29L30.74,30.13l6.39,5.14a2.46,2.46,0,0,0,1.56.55,2.48,2.48,0,0,0,1.57-.55L72.39,9.54h4.89a7.47,7.47,0,0,0-2.2-5.31A7.55,7.55,0,0,0,69.77,2L7.63,1.9h0A7.52,7.52,0,0,0,.09,9.38L0,53.38a7.51,7.51,0,0,0,7.51,7.51L69.64,61h0a7.52,7.52,0,0,0,7.52-7.48l0-11h-5ZM5,49.8,5.09,9.47,26.83,27ZM38.7,30.11,9.87,6.9,67.52,7Z"/><path d="M48.15,34.59,41.51,47.32a2.77,2.77,0,0,0,2.45,4,2.84,2.84,0,0,0,.76-.1l13.8-3.94L93.79,18.58,83.42,5.85Zm3.42,4.26,3.48,4.26L48.35,45Zm7.64,1.46-4.05-5L82.7,12.89l4.06,5Z"/><path d="M100.44,8,95.16,1.48A4,4,0,0,0,89.49.91L85.94,3.8,89.1,7.68,91.9,5.4l4,5-2.79,2.28,3.15,3.88,3.55-2.9A4,4,0,0,0,100.44,8Z"/></g></g></svg>
+	      	Compose
+	      </button>
+	      <br><br>
+	      <strong>Multi Buttons</strong>
+	      <p>Bemail also allows you to have multiple buttons without affecting other buttons composing prefix.</p>
+
+	      <p>Click on either of <strong>Compose</strong> button below.</p>
+	      <button class="mdc-button mdc-button--raised compose_button" id="compose">
+	      	<svg fill="white" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 101.35 61.03"><title>Compose to John</title><g id="Layer_2" data-name="Layer 2"><g id="icons"><path d="M72.19,50.59,68.85,47l-3.67,3.4,5.14,5.54a2.39,2.39,0,0,1-.66.1h0L7.52,55.89a2.47,2.47,0,0,1-1.14-.29L30.74,30.13l6.39,5.14a2.46,2.46,0,0,0,1.56.55,2.48,2.48,0,0,0,1.57-.55L72.39,9.54h4.89a7.47,7.47,0,0,0-2.2-5.31A7.55,7.55,0,0,0,69.77,2L7.63,1.9h0A7.52,7.52,0,0,0,.09,9.38L0,53.38a7.51,7.51,0,0,0,7.51,7.51L69.64,61h0a7.52,7.52,0,0,0,7.52-7.48l0-11h-5ZM5,49.8,5.09,9.47,26.83,27ZM38.7,30.11,9.87,6.9,67.52,7Z"/><path d="M48.15,34.59,41.51,47.32a2.77,2.77,0,0,0,2.45,4,2.84,2.84,0,0,0,.76-.1l13.8-3.94L93.79,18.58,83.42,5.85Zm3.42,4.26,3.48,4.26L48.35,45Zm7.64,1.46-4.05-5L82.7,12.89l4.06,5Z"/><path d="M100.44,8,95.16,1.48A4,4,0,0,0,89.49.91L85.94,3.8,89.1,7.68,91.9,5.4l4,5-2.79,2.28,3.15,3.88,3.55-2.9A4,4,0,0,0,100.44,8Z"/></g></g></svg>
+	      	John
+	      </button>
+
+	      <button class="mdc-button mdc-button--raised compose_button" id="compose">
+	      	<svg fill="white" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 101.35 61.03"><title>Compose to Laurel</title><g id="Layer_2" data-name="Layer 2"><g id="icons"><path d="M72.19,50.59,68.85,47l-3.67,3.4,5.14,5.54a2.39,2.39,0,0,1-.66.1h0L7.52,55.89a2.47,2.47,0,0,1-1.14-.29L30.74,30.13l6.39,5.14a2.46,2.46,0,0,0,1.56.55,2.48,2.48,0,0,0,1.57-.55L72.39,9.54h4.89a7.47,7.47,0,0,0-2.2-5.31A7.55,7.55,0,0,0,69.77,2L7.63,1.9h0A7.52,7.52,0,0,0,.09,9.38L0,53.38a7.51,7.51,0,0,0,7.51,7.51L69.64,61h0a7.52,7.52,0,0,0,7.52-7.48l0-11h-5ZM5,49.8,5.09,9.47,26.83,27ZM38.7,30.11,9.87,6.9,67.52,7Z"/><path d="M48.15,34.59,41.51,47.32a2.77,2.77,0,0,0,2.45,4,2.84,2.84,0,0,0,.76-.1l13.8-3.94L93.79,18.58,83.42,5.85Zm3.42,4.26,3.48,4.26L48.35,45Zm7.64,1.46-4.05-5L82.7,12.89l4.06,5Z"/><path d="M100.44,8,95.16,1.48A4,4,0,0,0,89.49.91L85.94,3.8,89.1,7.68,91.9,5.4l4,5-2.79,2.28,3.15,3.88,3.55-2.9A4,4,0,0,0,100.44,8Z"/></g></g></svg>
+	      	Laurel
+	      </button>
+	      <br><br>
+		  <div class="alert alert-warning" role="alert">
+		  <small>When dialog open you will notice that the email is being sent to prefix corresponded of your choice, instead of other individuals.</small>.
+		  </div>
+	      
+	    </div>
+	  </div>
+	</div>
+
+	<div class="mdc-dialog"
+	     role="composedialog"
+	     aria-modal="true"
+	     aria-labelledby="compose-dialog"
+	     aria-describedby="compose-elements">
+	  <div class="mdc-dialog__container">
+	    <div class="mdc-dialog__surface">
+	      <div class="mdc-dialog__title compose-header">
+	      	<h2>
+				<svg xmlns="http://www.w3.org/2000/svg" fill="#718093" viewBox="0 0 84.29 71.49" width="20"><title>Asset 6</title><g id="Layer_2" data-name="Layer 2"><g id="icons"><path d="M0,22.67,22.44,40.59l0,26.1L46.18,55.62,64.37,71.49,84.29,0Zm10.85,2.26L64.7,10.45,25.39,36.54ZM31.73,56.84,37.44,48l4.62,4Zm30,5.67L41.39,44.8l19.34-16L57.54,25,34.25,44.21a2.48,2.48,0,0,0-.59.48h0a2.31,2.31,0,0,0-.24.29l-6,9.28V41.18L76.75,8.45Z"/></g></g></svg>Compose</h2>
+	      </div>
+	      <div class="compose-form">
+	      	<!-- To-->
+			<div class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--disabled">
+			  <input class="mdc-text-field__input"
+			         type="text"
+			         placeholder="John@example.com"
+			         aria-label="cc"
+			         disabled>
+
+			</div>
+
+	      	<!-- Corbon Copy/CC-->
+			<div class="mdc-text-field mdc-text-field--fullwidth">
+			  <input class="mdc-text-field__input"
+			         type="text"
+			         placeholder="cc:"
+			         aria-label="cc">
+			</div>
+			<!-- Subject -->
+			<div class="mdc-text-field mdc-text-field--fullwidth">
+			  <input class="mdc-text-field__input"
+			         type="text"
+			         placeholder="Subject:"
+			         aria-label="Subject">
+			</div>
+			<!-- Message -->
+			<div class="mdc-text-field mdc-text-field--textarea">
+			  <textarea id="textarea" class="mdc-text-field__input" rows="4" cols="40" placeholder="Write your message..."></textarea>
+			  
+			</div>
+			<!--Send Button -->
+			<footer class="mdc-dialog__actions">
+				<button class="mdc-button mdc-button--raised mdc-dialog__button send-button" id="send">Send</button>
+			</footer>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="mdc-dialog__scrim"></div>
+	</div>
+
+	<hr>
+	<!-- Requirements -->
+	<div class="container">
+	  <div class="row">
+	    <div class="col-sm">
+	      <h4>Requirements</h4>
+	      <p>In order for Bemail to work on its own your Web server require to have the following settings available.</p>
+	      <ul>
+	      	<li>Apache</li>
+	      	<li>SMTP/IMAP Server</li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+	<hr>
+
+	<!-- Credit -->
+	<div class="container resources">
+	  <div class="row">
+	    <div class="col-sm">
+	      <h4>Resources</h4>
+	      <ul>
+	      	<li><a target="_blank" href="https://material.io">Matrial Design</a></li>
+	      	<li><a target="_blank" href="https://getbootstrap.com/">Bootstrap</a></li>
+	      	<li><a target="_blank" href="https://vuejs.org/">Vue.js</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+
+
+
+	<!-- JS Files -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+
+</body>
+</html>
