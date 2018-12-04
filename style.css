@@ -80,6 +80,10 @@ a:hover {
 	display: block !important;
 }
 
+.mdc-dialog__surface {
+	min-width: 480px !important;
+}
+
 
 .mdc-dialog .mdc-dialog__surface {
 	border-radius: 2px !important;
